@@ -1,5 +1,5 @@
 import discord
-from handle_form_submission import handle_form_submission
+from utils.handle_form_submission import handle_form_submission
 
 class ModalLevelUp(discord.ui.Modal):
     def __init__(self, title: str):
@@ -7,9 +7,9 @@ class ModalLevelUp(discord.ui.Modal):
 
         self.level_input = discord.ui.TextInput(
             label="Which Level",
-            placeholder="Enter the level"
+            placeholder="1-70 or 70-80..."
         )
-        self.name_realm_input = discord.ui.TextInput(label="Name and Realm")
+        self.name_realm_input = discord.ui.TextInput(label="Name and Realm",placeholder="name-realm")
         self.faction_input = discord.ui.TextInput(
             label="Ally or Horde",
             placeholder="Enter 'Ally' or 'Horde'"

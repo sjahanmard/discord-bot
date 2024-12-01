@@ -1,5 +1,5 @@
 import discord
-from handle_form_submission import handle_form_submission
+from utils.handle_form_submission import handle_form_submission
 
 class ModalLegacy(discord.ui.Modal):
     def __init__(self, title: str):
@@ -9,7 +9,7 @@ class ModalLegacy(discord.ui.Modal):
             label="Legacy Name",
             placeholder="Enter the legacy name"
         )
-        self.name_realm_input = discord.ui.TextInput(label="Name and Realm")
+        self.name_realm_input = discord.ui.TextInput(label="Name and Realm",placeholder="name-realm")
         self.note_input = discord.ui.TextInput(label="Note", style=discord.TextStyle.paragraph, required=False)
         
         self.add_item(self.legacy_name_input)

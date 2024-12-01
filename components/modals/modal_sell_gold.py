@@ -1,7 +1,7 @@
 import discord
-from handle_form_submission import handle_form_submission
+from utils.handle_form_submission import handle_form_submission
 
-class ModalBuyGold(discord.ui.Modal):
+class ModalSellGold(discord.ui.Modal):
     def __init__(self, title: str):
         super().__init__(title=title)
 
@@ -13,7 +13,7 @@ class ModalBuyGold(discord.ui.Modal):
             label="How Much Gold",
             placeholder="Enter the amount of gold needed"
         )
-        self.name_realm_input = discord.ui.TextInput(label="Name and Realm")
+        self.name_realm_input = discord.ui.TextInput(label="Name and Realm",placeholder="name-realm")
         self.note_input = discord.ui.TextInput(label="Note", style=discord.TextStyle.paragraph, required=False)
         
         self.add_item(self.payment_method_input)

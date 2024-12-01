@@ -4,10 +4,6 @@ from utils import get_channel_id
 async def handle_form_submission(interaction: discord.Interaction, form_data:dict ):
     await interaction.response.send_message("Thank you for completing the form, we will contact you asap!", ephemeral=True)
 
-    user_name = interaction.user.name
-    ticket_channel_name= interaction.channel.name
-    ticket_channel_d= interaction.channel.id
-
     channel_id = get_channel_id()
     channel = interaction.client.get_channel(channel_id)
     

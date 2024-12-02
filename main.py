@@ -40,4 +40,9 @@ async def on_message(message):
         except IndexError:
             await message.channel.send("Invalid usage of `!cancel`. Please provide an ID, e.g., `!cancel:12345`.")
 
-client.run(os.getenv("TOKEN"))
+token = os.getenv("TOKEN")
+if not token:
+    print("Token is missing!")
+else:
+    print("Token seems set!")
+    client.run(os.getenv("TOKEN"))

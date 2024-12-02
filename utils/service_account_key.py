@@ -1,7 +1,7 @@
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv('..')
+# load_dotenv('..')
 
 service_account_key = {
     "type": os.getenv("SERVICE_ACCOUNT_TYPE"),

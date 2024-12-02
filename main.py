@@ -37,7 +37,6 @@ async def on_message(message):
             is_cancelled = handle_cancellation(id=cancel_id)
             if is_cancelled:
                 await message.channel.send(f"Cancelled order id {cancel_id}." )
-        
         except IndexError:
             await message.channel.send("Invalid usage of `!cancel`. Please provide an ID, e.g., `!cancel:12345`.")
 

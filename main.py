@@ -5,9 +5,9 @@ import time
 from utils.service_account_key import service_account_key
 from datetime import datetime
 from utils.handle_cancellation import handle_cancellation
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-# load_dotenv()
+load_dotenv()
 
 intents = discord.Intents.default()
 intents.message_content = True

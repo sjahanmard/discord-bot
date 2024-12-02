@@ -45,4 +45,6 @@ if not token:
     print("Token is missing!")
 else:
     print("Token seems set!")
-    client.run(os.getenv("TOKEN"))
+
+print("Environment Variables:", os.environ)
+client.run(os.getenv("TOKEN"))
